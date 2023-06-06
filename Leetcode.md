@@ -273,7 +273,7 @@ It does not matter what you leave beyond the returned k (hence they are undersco
 
 [https://programmercarl.com/0203.%E7%A7%BB%E9%99%A4%E9%93%BE%E8%A1%A8%E5%85%83%E7%B4%A0.html](https://programmercarl.com/0203.移除链表元素.html)
 
-
+next 搞蒙了
 
 ####  **707.设计链表** 
 
@@ -286,6 +286,16 @@ It does not matter what you leave beyond the returned k (hence they are undersco
 题目链接/文章讲解/视频讲解：
 
 [https://programmercarl.com/0707.%E8%AE%BE%E8%AE%A1%E9%93%BE%E8%A1%A8.html](https://programmercarl.com/0707.设计链表.html)
+
+While cur:
+
+​	Cur = cur.next
+
+总是不知道cur最后停在none还是停在最后一个节点
+
+***是停在了None***
+
+cur.next = ListNode(val, cur.next) debug了半天， 写成了cur.next = ListNode(val, cur.next.next)
 
 
 
@@ -302,6 +312,12 @@ It does not matter what you leave beyond the returned k (hence they are undersco
 [https://programmercarl.com/0206.%E7%BF%BB%E8%BD%AC%E9%93%BE%E8%A1%A8.html](https://programmercarl.com/0206.翻转链表.html) 
 
 
+
+注意细节，可以用tmp储存数据
+
+tmp = cur
+
+cur.next 改变了之后，原来的tmp也会变，所以要tmp储存 cur.next而不是cur
 
 
 
