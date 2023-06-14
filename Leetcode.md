@@ -325,9 +325,9 @@ cur.next 改变了之后，原来的tmp也会变，所以要tmp储存 cur.next�
 
 ### Day 4
 
-### **24. 两两交换链表中的节点** 
+### 
 
-
+#### **24. 两两交换链表中的节点** 
 
 用虚拟头结点，这样会方便很多。 
 
@@ -343,9 +343,7 @@ cur.next 改变了之后，原来的tmp也会变，所以要tmp储存 cur.next�
 
 
 
-
-
-###  **19.删除链表的倒数第N个节点** 
+####  **19.删除链表的倒数第N个节点** 
 
 
 
@@ -361,9 +359,7 @@ cur.next 改变了之后，原来的tmp也会变，所以要tmp储存 cur.next�
 
 
 
-###  **面试题 02.07. 链表相交** 
-
-
+#### **面试题 02.07. 链表相交** 
 
 本题没有视频讲解，大家注意 数值相同，不代表指针相同。
 
@@ -375,7 +371,7 @@ cur.next 改变了之后，原来的tmp也会变，所以要tmp储存 cur.next�
 
 
 
-###  **142.环形链表II** 
+#### **142.环形链表II** 
 
 
 
@@ -389,7 +385,7 @@ cur.next 改变了之后，原来的tmp也会变，所以要tmp储存 cur.next�
 
 
 
-
+## 3.Hashtable
 
 ### Day 6
 
@@ -421,6 +417,8 @@ cur.next 改变了之后，原来的tmp也会变，所以要tmp储存 cur.next�
 
 题目链接/文章讲解/视频讲解： [https://programmercarl.com/0242.%E6%9C%89%E6%95%88%E7%9A%84%E5%AD%97%E6%AF%8D%E5%BC%82%E4%BD%8D%E8%AF%8D.html](https://programmercarl.com/0242.有效的字母异位词.html)  
 
+不难
+
 
 
 ####  **349. 两个数组的交集** 
@@ -433,6 +431,8 @@ cur.next 改变了之后，原来的tmp也会变，所以要tmp储存 cur.next�
 
 题目链接/文章讲解/视频讲解：[https://programmercarl.com/0349.%E4%B8%A4%E4%B8%AA%E6%95%B0%E7%BB%84%E7%9A%84%E4%BA%A4%E9%9B%86.html](https://programmercarl.com/0349.两个数组的交集.html)  
 
+不难, 因为最后返回的是unique value，所以可以考虑用set
+
 
 
 ####  **202. 快乐数** 
@@ -444,6 +444,10 @@ cur.next 改变了之后，原来的tmp也会变，所以要tmp储存 cur.next�
 
 
 题目链接/文章讲解：[https://programmercarl.com/0202.%E5%BF%AB%E4%B9%90%E6%95%B0.html](https://programmercarl.com/0202.快乐数.html)  
+
+求每个位置的digit有点卡住了
+
+"如果中间结果重复出现，说明陷入死循环了，该数不是快乐数" 这个没想到
 
 
 
@@ -461,11 +465,134 @@ cur.next 改变了之后，原来的tmp也会变，所以要tmp储存 cur.next�
 
 题目链接/文章讲解/视频讲解：[https://programmercarl.com/0001.%E4%B8%A4%E6%95%B0%E4%B9%8B%E5%92%8C.html](https://programmercarl.com/0001.两数之和.html) 
 
+不难
+
+
+
+### Day 7
+
+
+
+#### **454.四数相加II** 
+
+
+
+建议：本题是 使用map 巧妙解决的问题，好好体会一下 哈希法 如何提高程序执行效率，降低时间复杂度，当然使用哈希法 会提高空间复杂度，但一般来说我们都是舍空间 换时间， 工业开发也是这样。
+
+
+
+题目链接/文章讲解/视频讲解：[https://programmercarl.com/0454.%E5%9B%9B%E6%95%B0%E7%9B%B8%E5%8A%A0II.html](https://programmercarl.com/0454.四数相加II.html)  
+
+
+
+没有思路，但是感觉像是2sum的变形
+
+!!!实际上和3sum， 4sum不一样， 因为这个题的结果不用去重
+
+
+
+####  **383. 赎金信** 
+
+
+
+建议：本题 和 242.有效的字母异位词 是一个思路 ，算是拓展题 
+
+
+
+题目链接/文章讲解：[https://programmercarl.com/0383.%E8%B5%8E%E9%87%91%E4%BF%A1.html](https://programmercarl.com/0383.赎金信.html) 
+
+不难
+
+
+
+####  **15. 三数之和** 
+
+
+
+建议：本题虽然和 两数之和 很像，也能用哈希法，但用哈希法会很麻烦，双指针法才是正解，可以先看视频理解一下 双指针法的思路，文章中讲解的，没问题 哈希法很麻烦。 
+
+
+
+题目链接/文章讲解/视频讲解：[https://programmercarl.com/0015.%E4%B8%89%E6%95%B0%E4%B9%8B%E5%92%8C.html](https://programmercarl.com/0015.三数之和.html) 
+
+双指针，重点是去重，用set不行（因为list是unhashble, 但是可以用tuple(list)）
+
+
+
+####  **18. 四数之和** 
+
+
+
+建议： 要比较一下，本题和 454.四数相加II 的区别，为什么 454.四数相加II 会简单很多，这个想明白了，对本题理解就深刻了。 本题 思路整体和 三数之和一样的，都是双指针，但写的时候 有很多小细节，需要注意，建议先看视频。 
+
+
+
+题目链接/文章讲解/视频讲解：[https://programmercarl.com/0018.%E5%9B%9B%E6%95%B0%E4%B9%8B%E5%92%8C.html](https://programmercarl.com/0018.四数之和.html) 
+
+
+
+和3sum很像
+
+## 4. String
+
+### Day 8 
+
+#### **344.反转字符串** 
+
+
+
+建议： 本题是字符串基础题目，就是考察 reverse 函数的实现，同时也明确一下 平时刷题什么时候用 库函数，什么时候 不用库函数 
+
+
+
+题目链接/文章讲解/视频讲解：[https://programmercarl.com/0344.%E5%8F%8D%E8%BD%AC%E5%AD%97%E7%AC%A6%E4%B8%B2.html](https://programmercarl.com/0344.反转字符串.html)  
+
+
+
+####  **541. 反转字符串II**
+
+
+
+建议：本题又进阶了，自己先去独立做一做，然后在看题解，对代码技巧会有很深的体会。 
+
+
+
+题目链接/文章讲解/视频讲解：[https://programmercarl.com/0541.%E5%8F%8D%E8%BD%AC%E5%AD%97%E7%AC%A6%E4%B8%B2II.html](https://programmercarl.com/0541.反转字符串II.html)  
 
 
 
 
 
+####  **剑指Offer 05.替换空格** 
 
 
 
+建议：对于线性数据结构，填充或者删除，后序处理会高效的多。好好体会一下。
+
+题目链接/文章讲解：[https://programmercarl.com/%E5%89%91%E6%8C%87Offer05.%E6%9B%BF%E6%8D%A2%E7%A9%BA%E6%A0%BC.html](https://programmercarl.com/剑指Offer05.替换空格.html)  
+
+
+
+
+
+####  **151.翻转字符串里的单词** 
+
+
+
+建议：这道题目基本把 刚刚做过的字符串操作 都覆盖了，不过就算知道解题思路，本题代码并不容易写，要多练一练。 
+
+
+
+题目链接/文章讲解/视频讲解：[https://programmercarl.com/0151.%E7%BF%BB%E8%BD%AC%E5%AD%97%E7%AC%A6%E4%B8%B2%E9%87%8C%E7%9A%84%E5%8D%95%E8%AF%8D.html](https://programmercarl.com/0151.翻转字符串里的单词.html)  
+
+
+
+####  **剑指Offer58-II.左旋转字符串** 
+
+
+
+建议：题解中的解法如果没接触过的话，应该会想不到
+
+
+
+题目链接/文章讲解：[https://programmercarl.com/%E5%89%91%E6%8C%87Offer58-II.%E5%B7%A6%E6%97%8B%E8%BD%AC%E5%AD%97%E7%AC%A6%E4%B8%B2.html](https://programmercarl.com/剑指Offer58-II.左旋转字符串.html)  
